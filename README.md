@@ -1,5 +1,5 @@
-# Software Engineering Project - Text Comparator
+# Software Engineering Project - Text Comparator: version 1.0
 
-This is our repository for the Software Engineering Project subject
+This is the first version of our project. 
 
-Working with Erin Džinić in team.
+It serves as the artifact for report: "Structure modeling, prototype #1"
