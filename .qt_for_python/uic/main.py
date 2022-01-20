@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\ergo2\OneDrive - Faculty of Information Technologies\Documents\GitHub\SEP--text-comparator\tekst.ui'
+# Form implementation generated from reading ui file 'c:\Users\ergo2\OneDrive - Faculty of Information Technologies\Documents\GitHub\SEP--text-comparator\main.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
