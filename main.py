@@ -34,14 +34,7 @@ class UI(QMainWindow):
     
         self.show()
           
-    # def merge(self):
-    #     text1 = self.textA.toPlainText()+"\n"
-    #     text2 = self.textB.toPlainText()+"\n"
-        
-    #     with open('merged.txt','w') as merge:
-    #         merge.write(text1+text2)  
-        
-    #     QMessageBox.about(self,"Report","Texts successfully merged!")
+   
     def openWindow(self):
         self.noviProzor = secondWindow()
         self.noviProzor.show()
@@ -49,15 +42,15 @@ class UI(QMainWindow):
         
             
     def browseFileA(self):
-        fname = QFileDialog.getOpenFileName(self, 'Open text file', 'C:\\','txt files (*.txt)')    
-        fname = fname[0]
-        self.textA.setText(open(fname).read())
+        fname, _ = QFileDialog.getOpenFileName(self, 'Open text file', 'C:\\','txt files (*.txt)')    
+        if fname:
+         self.textA.setText(open(fname).read())
         
         
     def browseFileB(self):
-        fname = QFileDialog.getOpenFileName(self, 'Open text file', 'C:\\','txt files (*.txt)')    
-        fname = fname[0]
-        self.textB.setText(open(fname).read())
+        fname, _ = QFileDialog.getOpenFileName(self, 'Open text file', 'C:\\','txt files (*.txt)')    
+        if fname:
+         self.textB.setText(open(fname).read())
              
     def compare(self):
         
