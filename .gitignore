@@ -1,8 +1,11 @@
+/venv/**
+/__pycache__
+/.qt_for_python
+/Main/__pycache__
 /textA.txt
 /textB.txt
 /output_file.txt
 /merged.txt
-
-
+/difference_report.html
 
 

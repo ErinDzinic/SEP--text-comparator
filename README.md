@@ -1,5 +1,7 @@
-# Software Engineering Project - Text Comparator: version 1.0
+# Software Engineering Project - Text Comparator: version 2.0
 
-This is the first version of our project. 
+This is the second version of our project. 
 
-It serves as the artifact for report: "Structure modeling, prototype #1"
+It serves as the artifact for report: "Behavioural modelling, prototype #2"
+
+Please use "pip install -r requirements.txt" command in the console to install required modules for the app to work properly. 
