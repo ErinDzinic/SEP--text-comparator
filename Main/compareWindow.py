@@ -5,11 +5,11 @@ import codecs
 import sys
 import os 
 
-class secondWindow(QMainWindow):
+class compareWindow(QMainWindow):
      def __init__(self, parent=None):
-        super(secondWindow, self).__init__(parent)
+        super(compareWindow, self).__init__(parent)
         #Load file starting from Current working directory
-        uic.loadUi('Main/UI Files/newWindow.ui',self)     # moved the files to two folders
+        uic.loadUi('Main/UI Files/compareWindow.ui',self)     # moved the files to two folders
         self.resize(1000,900)
         
         self.text = self.findChild(QTextEdit,"textEdit")
@@ -17,12 +17,12 @@ class secondWindow(QMainWindow):
         f.open(QFile.ReadOnly|QFile.Text)
         istream = QTextStream(f)
         self.text.setHtml
-        layout = QHBoxLayout()
+        # layout = QHBoxLayout()
         self.view = QtWebEngineWidgets.QWebEngineView(self)
         self.view.resize(1900,1000)
         url = QtCore.QUrl.fromLocalFile(os.getcwd() + '/difference_report.html')
         self.view.load(url)
-        self.setLayout(layout)
+        # self.setLayout(layout)
         self.text = self.findChild(QTextEdit,"textEdit")
         text = open(os.getcwd() + '/difference_report.html').read()
         self.text.setText(text)
@@ -31,5 +31,12 @@ class secondWindow(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    secondWindow.window = secondWindow()
-    app.exec_()
+    try:
+        window = compareWindow()
+        window.show()
+    except FileNotFoundError as fnfe:
+        print('FileNotFoundError ocurred: ')
+        print(fnfe)
+        sys.exit()
+    
+    sys.exit(app.exec_())
